@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obs</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js" defer></script>
+</head>
+<body>
+    <header id="header"><h1>Student Managment System</h1></header>
+    
+    <button class="showButton" id="wiewStudent">Wiev Student</button>
+    <button class="showButton" id="wievCourses">Wiev Courses</button>
+    <div class="container">
+        <div class="left-container">
+
+        <!-- <button class="start-btn">Search Student</button> -->
+        <div>
+            <button class="start-btn">Add student</button>
+            
+            <div class="adding">
+                <form id="new-student">
+                    <div class="form-group">
+                        <label for="Name">Name</label>
+                        <input type="text" class="form-control" id="name">    
+                    </div>
+                    <div class="form-group">
+                        <label for="surname">surname</label>
+                        <input type="text" class="form-control" id="surname">    
+                    </div>
+                    <div class="form-group">
+                        <label for="id">id</label>
+                        <input type="text" class="form-control" id="id">    
+                    </div>
+                    <button type="submit" class="btn">Save</button>
+                </form>
+            </div>
+        </div>
+        <div>
+            <button class="start-btn addinglesson">Add Lesson</button>
+            <div class="adding add-course">
+                <form id="add-course">
+                    <h3>Add Course</h3>
+                    <div class="form-group">
+                        <label for="id">lesson id</label>
+                        <input type="text" class="form-control" id="lessonId">    
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Lesson Name</label>
+                        <input type="text" class="form-control" id="lessonName">    
+
+                    </div>
+                    <div class="form-group">
+                        <label for="credit">Grading System</label>
+                        <select id="credit" name="select-city" required >
+                            <option value="">Select credit</option>
+                            <option value="7">7</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn">Save</button>
+                </form>
+            </div>
+        </div>
+        
+        
+    </div>
+
+    <div class="students">
+        <div>
+            <div id="search">
+                <input type="text" id="searcinput" placeholder="Search...">
+                <button id="search-box">Search</button>
+            </div>            
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>Student</th>
+                        <th>surname</th>
+                        <th>lessons</th>
+                        <th>Delete</th>
+                        
+                    </tr>
+                </thead>
+                <tbody id="student-list">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="courses">
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>lesson id</th>
+                        <th>lesson name</th>
+                        <th>credit</th>
+                        <th>Delete</th>
+                        <th>show</th>
+                    </tr>
+                </thead>
+                <tbody id="course-list">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="myModal" class="modal">
+        <h3 id="courseID"></h3>
+        <div class="content">
+            <span class="close">&times;</span>
+
+            <table class="tableshow">
+                <thead> 
+                    <tr>
+                        <th>student id</th>
+                        <th>student name</th>
+                        <th>student surname</th>
+                        <th>midterm</th>
+                        <th>final</th>
+                        <th>Score</th>
+                        <<th><!--<button value="10" class="gradeButton">10</button> <button value="7" class="gradeButton">7</button> -->Grade</th> 
+                        <th>Situation</th>
+                    </tr>
+                </thead>
+                <tbody id="student-info">
+    
+                </tbody>
+            </table>
+            <div>
+                <button class="start-btn addinglesson">Add Lesson</button>
+                <div class="adding">
+                    <form id="addstudentToCourse">
+                        <div class="form-group">
+                            <label for="id">student id</label>
+                            <input type="text" name="lessonId" id="studentid">    
+                        </div>
+                        <div class="form-group">
+                            <label for="name">student Name</label>
+                            <input type="text" name="lessonName" id="studentname">   
+                        </div>
+                        <div class="form-group">
+                            <label for="name">student surname</label>
+                            <input type="text" name="lessonName" id="studentsurname">   
+                        </div>
+                        <div class="form-group">
+                            <label for="name">midterm</label>
+                            <input type="text" name="midterm" id="midterm">   
+                        </div>
+                        <div class="form-group">
+                            <label for="name">final</label>
+                            <input type="text" name="final" id="final">   
+                        </div>
+                        <button type="submit" class="btn">Save</button>
+                    </form>
+                </div>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

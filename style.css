@@ -1,0 +1,180 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Ekran yüksekliği kadar genişletir */
+    margin: 0; /* Body margin'ını sıfırlar */
+}
+
+#header{
+    height: 80px;
+    background-color: #716F81;
+    padding-top: 1.4rem;
+    padding-left: 2rem;
+}
+
+
+
+
+.left-container button{
+    display: flex;
+    flex-direction: column;
+    
+}.alert-correct{
+
+    background-color: green;
+}
+
+.alert-warning{
+    background-color: #b45612;
+    margin-top: 8px;
+    padding: 0.4rem;
+    border-radius: 99px;
+    color: white;
+}
+
+.adding{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.adding.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.container{
+    display: flex;
+}
+.left-container {
+    display: flex;
+    max-width: 1000px;
+    height: 100%;
+    gap: 3rem;
+    padding-left: 2rem;
+
+}
+
+.form{
+    display: flex;
+    padding: 1rem;
+    margin-right: 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 450px;
+    margin: auto;
+}
+
+
+input,select,.alert {
+    width: 100%;
+    padding: 8px 20px;
+    margin-top: 1em;
+}
+
+button {
+    background-color: #716F81;
+    color: white;
+    padding: 10px;
+    margin-top:1em ;
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.showButton{
+  width: 150px;
+}
+
+.students{
+    max-width: 1000px;
+    opacity: 0;
+}
+.students.active{
+    max-width: 1000px;
+    opacity: 1;
+    margin-right: 3rem;
+
+}
+
+/* opacity 0 is meaning not seen */
+.courses{
+    max-width: 1000px;
+    opacity: 0;
+}
+.courses.active{
+    max-width: 1000px;
+    opacity: 1;
+    margin-right: 3rem;
+
+}
+
+table {
+    border-collapse: collapse;
+    color: 	#8e0c88;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+th {
+    background-color: #965572;
+  }
+
+
+.content {
+    opacity: 0;
+}
+.content.active {
+    position: absolute;
+    top: 850px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    opacity: 1;
+
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
